@@ -5,7 +5,7 @@ public class Victini extends Pokemon
 	
 	public Victini()
 	{
-		super(494, "AshGreninja");
+		super(494, "Victini");
 	}
 	
 	public Victini(String name)
