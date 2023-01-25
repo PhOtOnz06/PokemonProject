@@ -43,13 +43,13 @@ public class Controller
 		
 		pokedex.add(new Zekrom(644, "Amazing dragon that represents Yin"));
 		
-		pokedex.add(new HisuianZoroark());
+		pokedex.add(new HisuianZoroark(571, "Cool ghost version of Zoroark"));
 		
-		pokedex.add(new Zacian());
+		pokedex.add(new Zacian(888, "Big dog with sword"));
 		
-		pokedex.add(new Charmander());
+		pokedex.add(new Charmander(4, "Adorable little flame lizard"));
 		
-		pokedex.add(new Articuno());
+		pokedex.add(new Articuno(144, "Best legendary bird... Don't @ me. Great design"));
 		
 	}
 	
