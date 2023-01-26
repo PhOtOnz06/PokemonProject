@@ -1,6 +1,6 @@
 package poke.model;
 
-public class Zekrom extends Pokemon
+public class Zekrom extends Pokemon implements Electric, Dragon
 {
 	
 	public Zekrom()
@@ -17,6 +17,21 @@ public class Zekrom extends Pokemon
 	public Zekrom(int number, String name)
 	{
 		super(number, name);
+	}
+	
+	public int thunder()
+	{
+		return 130;
+	}
+	
+	public int thunderbolt()
+	{
+		return 100;
+	}
+	
+	public int dragonPulse()
+	{
+		return 80;
 	}
 	
 	

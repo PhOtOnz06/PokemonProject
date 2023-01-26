@@ -1,6 +1,6 @@
 package poke.model;
 
-public class Victini extends Pokemon
+public class Victini extends Pokemon implements Fire, Psychic
 {
 	
 	public Victini()
@@ -19,6 +19,14 @@ public class Victini extends Pokemon
 		super(number, name);
 	}
 	
+	public int flamethrower()
+	{
+		return getHealth() - 100; 
+	}
 	
+	public int psychic()
+	{
+		return 60;
+	}
 	
 }

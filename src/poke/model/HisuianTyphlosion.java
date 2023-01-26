@@ -1,6 +1,6 @@
 package poke.model;
 
-public class HisuianTyphlosion extends Pokemon
+public class HisuianTyphlosion extends Pokemon implements Dark, Fire
 {
 	
 	public HisuianTyphlosion()
@@ -19,5 +19,14 @@ public class HisuianTyphlosion extends Pokemon
 		super(number, name);
 	}
 	
+	public int flamethrower()
+	{
+		return getHealth() - 100; 
+	}
+	
+	public int darkPulse()
+	{
+		return 70;
+	}
 	
 }

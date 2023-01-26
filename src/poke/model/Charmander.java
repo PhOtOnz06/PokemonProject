@@ -1,6 +1,6 @@
 package poke.model;
 
-public class Charmander extends Pokemon
+public class Charmander extends Pokemon implements Fire
 {
 	
 	public Charmander()
@@ -18,6 +18,14 @@ public class Charmander extends Pokemon
 	{
 		super(number, name);
 	}
-
+	
+	public int flamethrower()
+	{
+		return getHealth() - 100; 
+	}
+	
+	
+	
+	
 
 }

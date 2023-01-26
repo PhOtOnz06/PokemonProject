@@ -1,6 +1,6 @@
 package poke.model;
 
-public class Zacian extends Pokemon
+public class Zacian extends Pokemon implements Fairy, Steel
 {
 	
 	public Zacian()
@@ -18,6 +18,23 @@ public class Zacian extends Pokemon
 	{
 		super(number, name);
 	}
+	
+	public int moonBlast()
+	{
+		return 50;
+	}
+	
+	public int sunSteelStrike()
+	{
+		return 140;
+	}
+	
+	
+	
+	
+	
+	
+	
 
 
 }

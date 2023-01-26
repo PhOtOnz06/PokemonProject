@@ -1,6 +1,6 @@
 package poke.model;
 
-public class Articuno extends Pokemon
+public class Articuno extends Pokemon implements Ice, Flying
 {
 	
 	public Articuno()
@@ -18,6 +18,20 @@ public class Articuno extends Pokemon
 	{
 		super(number, name);
 	}
-
+	
+	public int iceBeam()
+	{
+		return 50;
+	}
+	
+	public int arialAce()
+	{
+		return 30;
+	}
+	
+	
+	
+	
+	
 
 }

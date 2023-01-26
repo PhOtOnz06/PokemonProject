@@ -1,6 +1,6 @@
 package poke.model;
 
-public class Torracat extends Pokemon
+public class Torracat extends Pokemon implements Fire
 {
 	
 	public Torracat()
@@ -19,6 +19,10 @@ public class Torracat extends Pokemon
 		super(number, name);
 	}
 	
+	public int flamethrower()
+	{
+		return getHealth() - 100; 
+	}
 	
 	
 }

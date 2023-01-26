@@ -1,6 +1,6 @@
 package poke.model;
 
-public class AshGreninja extends Pokemon
+public class AshGreninja extends Pokemon implements Water, Dark
 {
 	
 	public AshGreninja()
@@ -19,7 +19,14 @@ public class AshGreninja extends Pokemon
 		super(number, name);
 	}
 	
+	public int waterGun()
+	{
+		return 50;
+	}
 	
-	
+	public int darkPulse()
+	{
+		return 70;
+	}
 	
 }

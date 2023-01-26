@@ -1,6 +1,6 @@
 package poke.model;
 
-public interface Electic 
+public interface Electric 
 {
 	public int thunder();
 	public int thunderbolt();
