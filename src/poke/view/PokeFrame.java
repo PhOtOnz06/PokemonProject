@@ -7,14 +7,13 @@ public class PokeFrame extends JFrame
 {
 	
 	private Controller app;
-	
+	private PokePanel panel;
 	
 	public PokeFrame(Controller app)
 	{
 		super();
 		this.app = app;
-		
-		
+		this.panel = new PokePanel(this.app);
 		setUpFrame();
 	}
 	
