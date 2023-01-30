@@ -1,4 +1,7 @@
-package poke.model;
+package poke.model.monsters;
+
+import poke.model.types.Dark;
+import poke.model.types.Fire;
 
 public class HisuianTyphlosion extends Pokemon implements Dark, Fire
 {
@@ -11,7 +14,7 @@ public class HisuianTyphlosion extends Pokemon implements Dark, Fire
 	public HisuianTyphlosion(String name)
 	{
 		super(157, name);
-		
+		setup(200, false);
 	}
 	
 	public HisuianTyphlosion(int number, String name)
@@ -28,5 +31,6 @@ public class HisuianTyphlosion extends Pokemon implements Dark, Fire
 	{
 		return 70;
 	}
+	
 	
 }

@@ -1,4 +1,7 @@
-package poke.model;
+package poke.model.monsters;
+
+import poke.model.types.Ghost;
+import poke.model.types.Normal;
 
 public class HisuianZoroark extends Pokemon implements Ghost, Normal
 {
@@ -11,7 +14,7 @@ public class HisuianZoroark extends Pokemon implements Ghost, Normal
 	public HisuianZoroark(String name)
 	{
 		super(571, name);
-		
+		setup(210, false);
 	}
 	
 	public HisuianZoroark(int number, String name)

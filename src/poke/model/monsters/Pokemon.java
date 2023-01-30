@@ -1,4 +1,4 @@
-package poke.model;
+package poke.model.monsters;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -84,6 +84,12 @@ public abstract class Pokemon implements Serializable
 		this.name = name;
 	}
 	
+	public void setup(int health, boolean canEvolve)
+	{
+		this.health = health;
+		this.canEvolve = canEvolve;
+	}
+	
 	@Override
 	public String toString()
 	{
@@ -91,5 +97,7 @@ public abstract class Pokemon implements Serializable
 		
 		return description;
 	}
+	
+	
 
 }

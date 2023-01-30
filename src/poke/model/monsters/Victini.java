@@ -1,4 +1,7 @@
-package poke.model;
+package poke.model.monsters;
+
+import poke.model.types.Fire;
+import poke.model.types.Psychic;
 
 public class Victini extends Pokemon implements Fire, Psychic
 {
@@ -11,7 +14,7 @@ public class Victini extends Pokemon implements Fire, Psychic
 	public Victini(String name)
 	{
 		super(494, name);
-		
+		setup(120, false);
 	}
 	
 	public Victini(int number, String name)

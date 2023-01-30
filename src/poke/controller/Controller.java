@@ -1,6 +1,17 @@
 package poke.controller;
 
 import poke.model.*;
+import poke.model.monsters.Articuno;
+import poke.model.monsters.AshGreninja;
+import poke.model.monsters.Charmander;
+import poke.model.monsters.Gengar;
+import poke.model.monsters.HisuianTyphlosion;
+import poke.model.monsters.HisuianZoroark;
+import poke.model.monsters.Pokemon;
+import poke.model.monsters.Torracat;
+import poke.model.monsters.Victini;
+import poke.model.monsters.Zacian;
+import poke.model.monsters.Zekrom;
 import poke.view.PokeFrame;
 import java.util.ArrayList;
 

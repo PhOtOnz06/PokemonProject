@@ -1,4 +1,7 @@
-package poke.model;
+package poke.model.monsters;
+
+import poke.model.types.Dark;
+import poke.model.types.Water;
 
 public class AshGreninja extends Pokemon implements Water, Dark
 {
@@ -11,7 +14,7 @@ public class AshGreninja extends Pokemon implements Water, Dark
 	public AshGreninja(String name)
 	{
 		super(658, name);
-		
+		setup(170, false);
 	}
 	
 	public AshGreninja(int number, String name)

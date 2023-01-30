@@ -1,4 +1,7 @@
-package poke.model;
+package poke.model.monsters;
+
+import poke.model.types.Fairy;
+import poke.model.types.Steel;
 
 public class Zacian extends Pokemon implements Fairy, Steel
 {
@@ -11,7 +14,7 @@ public class Zacian extends Pokemon implements Fairy, Steel
 	public Zacian(String name)
 	{
 		super(888, name);
-		
+		setup(250, false);
 	}
 	
 	public Zacian(int number, String name)
