@@ -80,7 +80,7 @@ public class PokePanel extends JPanel
 	private void setupPanel()
 	{
 		this.setLayout(layout);
-		this.setBackground(Color.CYAN);
+		this.setBackground(Color.MAGENTA);
 		this.setPreferredSize(new Dimension(1024, 768));
 		
 		this.numberField.setEnabled(false);
@@ -99,6 +99,7 @@ public class PokePanel extends JPanel
 		this.fieldPanel.add(numberField);
 		
 		this.fieldPanel.add(evolveBox);
+		this.fieldPanel.add(typesPane);
 		
 		this.add(fieldPanel);
 		this.add(imageLabel);
@@ -113,6 +114,19 @@ public class PokePanel extends JPanel
 	
 	private void setupLayout()
 	{
+		layout.putConstraint(SpringLayout.WEST, fieldPanel, -350, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.EAST, fieldPanel, -25, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.NORTH, fieldPanel, 25, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.SOUTH, fieldPanel, -25, SpringLayout.SOUTH, this);
+		
+		layout.putConstraint(SpringLayout.NORTH, imageLabel, 150, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.WEST, fieldPanel);
+		
+		layout.putConstraint(SpringLayout.WEST, pokedexSelector, 150, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.EAST, pokedexSelector, -150, SpringLayout.WEST, fieldPanel);
+		layout.putConstraint(SpringLayout.SOUTH, pokedexSelector, -200, SpringLayout.SOUTH, this);
+		
 		
 	}
 	

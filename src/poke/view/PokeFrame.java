@@ -20,6 +20,7 @@ public class PokeFrame extends JFrame
 	
 	private void setUpFrame()
 	{
+		this.setContentPane(panel);
 		this.setSize(1024,768);
 		this.setResizable(false);
 		this.setTitle("Inheritance and Pokemon");
