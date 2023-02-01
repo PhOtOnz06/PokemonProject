@@ -36,14 +36,24 @@ public class Controller
 		
 		try
 		{
-			
+			Integer.parseInt(text);
+			isValid = true;
 		}
 		catch (NumberFormatException error)
 		{
-			
+			JOptionPane.showMessageDialog(window, "You need to type in a numer!");
 		}
 		
 		return isValid;
+	}
+	
+	public void updateCurrentPokemon(String name, int index, int health, boolean evolve)
+	{
+		Pokemon current = pokedex.get(index);
+		
+		current.setName(name);
+		current.setHealth(health);
+		current.setCanEvolve(evolve);
 	}
 	
 	private void createPokedex()
