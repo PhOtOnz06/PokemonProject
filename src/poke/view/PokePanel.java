@@ -46,6 +46,7 @@ public class PokePanel extends JPanel
 	private JComboBox<String> pokedexSelector;
 	
 	private JButton updateButton;
+	private JButton saveButton;
 	
 	public PokePanel(Controller app)
 	{
@@ -70,6 +71,7 @@ public class PokePanel extends JPanel
 		this.icon = new ImageIcon();
 		this.pokedexSelector = new JComboBox<String>();
 		this.updateButton = new JButton("Update pokemon stats!!");
+//		this.saveButton = new JButton("Save");
 		
 		
 		
@@ -105,6 +107,7 @@ public class PokePanel extends JPanel
 		this.fieldPanel.add(typesPane);
 		
 		this.fieldPanel.add(updateButton);
+//		this.fieldPanel.add(saveButton);
 		
 		this.add(fieldPanel);
 		this.add(imageLabel);
@@ -131,6 +134,7 @@ public class PokePanel extends JPanel
 	private void setupListeners()
 	{
 		updateButton.addActionListener(click -> collectionInput());
+//		saveButton.addActionListener(click -> );
 	}
 	
 	private void setupLayout()

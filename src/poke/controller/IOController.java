@@ -15,9 +15,25 @@ import javax.swing.JOptionPane;
 
 public class IOController 
 {
-	public static ArrayList<Pokemon> loadData(String datafile, PokeFrame frame)
+	public static ArrayList<Pokemon> loadData(String dataFile, PokeFrame frame)
 	{
 		ArrayList<Pokemon> pokeList = null;
+		
+		try (FileInputStream fileStream = new FileInputStream(dataFile); 
+			ObjectInputStream objectStream = new ObjectInputStream(fileStream))
+		{
+			ArrayList<Pokemon> loadedPokemon = new ArrayList<Pokemon>();
+			loadedPokemon = (ArrayList<Pokemon>) objectStream.readObject();
+			pokeList = loadedPokemon;
+		}
+		catch (IOException fileReadError)
+		{
+			JOptionPane.showMessageDialog(frame, fileReadError.getMessage(), "Could not read the file :(", JOptionPane.ERROR_MESSAGE);
+		}
+		catch (ClassNotFoundException classError)
+		{
+			JOptionPane.showMessageDialog(frame, classError.getMessage(), "OMG class error!", JOptionPane.ERROR_MESSAGE);
+		}
 		
 		return pokeList;
 	}
