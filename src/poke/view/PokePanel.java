@@ -11,6 +11,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.ImageIcon;
+import javax.swing.DefaultComboBoxModel;
 
 import java.awt.GridLayout;
 import java.awt.Color;
@@ -74,12 +75,58 @@ public class PokePanel extends JPanel
 		this.saveButton = new JButton("Save");
 		
 		
-		
+		setupDropDown();
 		setupPanel();
 		setupListeners();
 		setupLayout();
 		
 		
+	}
+	
+	private void setupDropDown()
+	{
+		DefaultComboBoxModel<String> model = new DefaultComboBoxModel(app.buildPokedexText());
+		pokedexSelector.setModel(model);
+	}
+	
+	private void updateFields(int index)
+	{
+		String [] pokemonData = app.getPokemonData(index);
+		
+		nameField.setText(pokemonData[0]);
+		evolveBox.setSelected(Boolean.parseBoolean(pokemonData[1]));
+		healthField.setText(pokemonData[2]);
+		numberField.setText(pokemonData[3]);
+		typesArea.setText(pokemonData[4]);
+	}
+	
+	private void updatePokemonScreen()
+	{
+		String name = pokedexSelector.getSelectedItem().toString();
+		int nameStart= name.indexOf(": ") + 2;
+		name = name.substring(nameStart);
+		
+		
+		imageLabel.setText(name);
+		updateFields(pokedexSelector.getSelectedIndex());
+	}
+	
+	private void updateDisplay(String name)
+	{
+		String path = "/poke/view/images";
+		String defaultName = "Ash Greninja";
+		String extension = ".png";
+		
+		try 
+		{
+			icon = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		catch (NullPointerException missingFile)
+		{
+			icon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		}
+		
+		imageLabel.setIcon(icon);
 	}
 	
 	private void setupPanel()
@@ -135,6 +182,7 @@ public class PokePanel extends JPanel
 	{
 		updateButton.addActionListener(click -> collectionInput());
 		saveButton.addActionListener(click -> app.save());
+		pokedexSelector.addActionListener(selection -> updatePokemonScreen());
 	}
 	
 	private void setupLayout()
