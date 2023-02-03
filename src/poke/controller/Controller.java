@@ -72,25 +72,25 @@ public class Controller
 	
 	private void createPokedex()
 	{
-		pokedex.add(new AshGreninja(658, "Super cool ninja pokemon!"));
+		pokedex.add(new AshGreninja(658, "Ash Greninja"));
 		
-		pokedex.add(new Gengar(94, "A very spoopy ghost!"));
+		pokedex.add(new Gengar(94, "Gengar"));
 		
-		pokedex.add(new Torracat(72, "Adorable flame kitty!"));
+		pokedex.add(new Torracat(72, "Torracat"));
 		
-		pokedex.add(new HisuianTyphlosion(157, "Sick purple flame badger that breath fire!"));
+		pokedex.add(new HisuianTyphlosion(157, "Hisuian Typhlosion"));
 		
-		pokedex.add(new Victini(494, "A playful, cute, and team reliant pokemon!"));
+		pokedex.add(new Victini(494, "Victini"));
 		
-		pokedex.add(new Zekrom(644, "Amazing dragon that represents Yin"));
+		pokedex.add(new Zekrom(644, "Zekrom"));
 		
-		pokedex.add(new HisuianZoroark(571, "Cool ghost version of Zoroark"));
+		pokedex.add(new HisuianZoroark(571, "Hisuian Zoroark"));
 		
-		pokedex.add(new Zacian(888, "Big dog with sword"));
+		pokedex.add(new Zacian(888, "Zacian"));
 		
-		pokedex.add(new Charmander(4, "Adorable little flame lizard"));
+		pokedex.add(new Charmander(4, "Charmander"));
 		
-		pokedex.add(new Articuno(144, "Best legendary bird... Don't @ me. Great design"));
+		pokedex.add(new Articuno(144, "Articuno"));
 		
 	}
 	
