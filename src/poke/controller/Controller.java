@@ -55,7 +55,7 @@ public class Controller
 		}
 		catch (NumberFormatException error)
 		{
-			JOptionPane.showMessageDialog(window, "You need to type in a numer!");
+			JOptionPane.showMessageDialog(window, "You need to type in a number!");
 		}
 		
 		return isValid;

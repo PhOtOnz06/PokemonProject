@@ -108,13 +108,14 @@ public class PokePanel extends JPanel
 		
 		
 		imageLabel.setText(name);
+		updateDisplay(name);
 		updateFields(pokedexSelector.getSelectedIndex());
 	}
 	
 	private void updateDisplay(String name)
 	{
-		String path = "/poke/view/images";
-		String defaultName = "Ash Greninja";
+		String path = "/poke/view/images/";
+		String defaultName = "AshGreninja";
 		String extension = ".png";
 		
 		try 
@@ -159,7 +160,7 @@ public class PokePanel extends JPanel
 		this.add(fieldPanel);
 		this.add(imageLabel);
 		this.add(pokedexSelector);
-		
+		updateDisplay("");
 	}
 	
 	private void collectionInput()
