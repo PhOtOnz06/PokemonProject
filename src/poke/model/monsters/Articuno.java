@@ -9,17 +9,19 @@ public class Articuno extends Pokemon implements Ice, Flying
 	public Articuno()
 	{
 		super(144, "Articuno");
+		setup(240, false, 2);
 	}
 	
 	public Articuno(String name)
 	{
 		super(144, name);
-		setup(240, false);
+		setup(240, false, 2);
 	}
 	
 	public Articuno(int number, String name)
 	{
 		super(number, name);
+		setup(240, false, 2);
 	}
 	
 	public int iceBeam()

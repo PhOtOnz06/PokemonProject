@@ -84,7 +84,7 @@ public abstract class Pokemon implements Serializable
 		this.name = name;
 	}
 	
-	public void setup(int health, boolean canEvolve)
+	public void setup(int health, boolean canEvolve, float multiplyer)
 	{
 		this.health = health;
 		this.canEvolve = canEvolve;
